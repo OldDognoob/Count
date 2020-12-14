@@ -1,4 +1,5 @@
 import React from "react";
+import { render } from 'react-dom'
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
@@ -12,8 +13,8 @@ console.log(store.getState());
 
 //STEP 6 wrap the application with a Provider from React-Redux
 render(
-  <Provider store={createStore(counter)}>
-    <Counter />
-  </Provider>,
-  document.querySelector("#root")
-);
+    <Provider store={createStore(counter)}>
+      <Counter />
+    </Provider>,
+    document.querySelector('#root')
+  )
